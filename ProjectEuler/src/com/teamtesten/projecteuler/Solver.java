@@ -25,6 +25,10 @@ public class Solver
 		{
 			System.out.println("Invalid argument, enter the number of the problem to run.");
 		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println("Problem " + problemNum + " has not yet been completed.");
+		}
 		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
