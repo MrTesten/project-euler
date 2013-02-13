@@ -6,11 +6,10 @@ public class ProblemFactory
 {
 	public static Problem createProblem(int problemNumber) throws Exception
 	{
-		String classPath = "com.teamtesten.projecteuler.problems.";
-		String className = String.format("Problem%03d", problemNumber);
+		String className = "com.teamtesten.projecteuler.problems.Problem";
+		className = String.format("%s%03d", className, problemNumber);
 		
-		Class problemClass = Class.forName(classPath+className);
-		Problem problem = (Problem)problemClass.newInstance();
+		Problem problem = (Problem)Class.forName(className).newInstance();
 		
 		return problem;
 	}
