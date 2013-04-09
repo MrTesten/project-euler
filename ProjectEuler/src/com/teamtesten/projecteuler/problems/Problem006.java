@@ -1,6 +1,5 @@
 package com.teamtesten.projecteuler.problems;
 
-import java.math.BigInteger;
 
 public class Problem006 implements Problem
 {
@@ -8,13 +7,13 @@ public class Problem006 implements Problem
 	{
 		return "Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.";
 	}
-	
+
 	public int getProblemNumber()
 	{
 		return 6;
 	}
 
-	public BigInteger evaluate()
+	public String evaluate()
 	{
 		int startTerm = 1;
 		int stopTerm = 100;
@@ -28,6 +27,6 @@ public class Problem006 implements Problem
 		squareOfSums *= squareOfSums;
 
 		Integer difference = squareOfSums - sumOfSquares;
-		return new BigInteger(difference.toString());
+		return difference.toString();
 	}
 }

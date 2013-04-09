@@ -1,7 +1,5 @@
 package com.teamtesten.projecteuler.problems;
 
-import java.math.BigInteger;
-
 import com.teamtesten.projecteuler.utilities.CommonUtilities;
 
 public class Problem002 implements Problem
@@ -16,13 +14,13 @@ public class Problem002 implements Problem
 		return 2;
 	}
 
-	public BigInteger evaluate()
+	public String evaluate()
 	{
 		long maxNumber = 4000000;
 		long previous = 1;
 		long current = 2;
 		long sum = 0;
-		
+
 		while(current < maxNumber)
 		{
 			if(CommonUtilities.isFactor(current, 2))
@@ -30,6 +28,6 @@ public class Problem002 implements Problem
 			current = current + previous;
 			previous = current - previous;
 		}
-		return new BigInteger(Long.toString(sum));
+		return Long.toString(sum);
 	}
 }

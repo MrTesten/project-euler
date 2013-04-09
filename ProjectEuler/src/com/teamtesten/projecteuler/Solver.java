@@ -1,17 +1,15 @@
 package com.teamtesten.projecteuler;
 
-import java.math.BigInteger;
-
-import com.teamtesten.projecteuler.utilities.ProblemFactory;
 import com.teamtesten.projecteuler.problems.Problem;
+import com.teamtesten.projecteuler.utilities.ProblemFactory;
 
 public class Solver
-{	
+{
 	private Problem problem;
 	private double evaluationTime;
-	private BigInteger result;
-	
-	public Solver(String problemNum)
+	private String result;
+
+	public Solver(final String problemNum)
 	{
 		try
 		{
@@ -31,7 +29,7 @@ public class Solver
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void solve()
 	{
 		if(problem != null)
@@ -41,13 +39,13 @@ public class Solver
 			evaluationTime = (System.nanoTime() - startTime)/1000000.0;
 		}
 	}
-	
+
 	public void printResults()
 	{
 		if(problem != null)
 		{
 			System.out.println("Problem " + problem.getProblemNumber() + ": " + problem.getProblemText());
-			System.out.println("Result: " + result.toString());
+			System.out.println("Result: " + result);
 			System.out.println("Execution Time: " + evaluationTime + "ms.");
 		}
 	}

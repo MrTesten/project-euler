@@ -1,6 +1,5 @@
 package com.teamtesten.projecteuler.problems;
 
-import java.math.BigInteger;
 
 public class Problem009 implements Problem
 {
@@ -8,20 +7,20 @@ public class Problem009 implements Problem
 	{
 		return "Find the product abc.";
 	}
-	
+
 	public int getProblemNumber()
 	{
 		return 9;
 	}
 
-	public BigInteger evaluate()
+	public String evaluate()
 	{
 		double a = 0;
 		double b = 0;
 		double c = 0;
-		
+
 		int tripletSum = 1000;
-		
+
 		while((a+b+c) != tripletSum)
 		{
 			b++;
@@ -32,7 +31,7 @@ public class Problem009 implements Problem
 			}
 		}
 		Integer abc = (int)(a*b*c);
-		return new BigInteger(abc.toString());
+		return abc.toString();
 	}
 
 }

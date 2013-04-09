@@ -1,7 +1,5 @@
 package com.teamtesten.projecteuler.problems;
 
-import java.math.BigInteger;
-
 import com.teamtesten.projecteuler.utilities.CommonUtilities;
 
 public class Problem003 implements Problem
@@ -16,7 +14,7 @@ public class Problem003 implements Problem
 		return 3;
 	}
 
-	public BigInteger evaluate()
+	public String evaluate()
 	{
 		long number = 600851475143L;
 		long highestPrimeFactor = 0;
@@ -24,6 +22,6 @@ public class Problem003 implements Problem
 			if(CommonUtilities.isFactor(number,i))
 				if(CommonUtilities.isPrime(i))
 					highestPrimeFactor = i;
-		return new BigInteger(Long.toString(highestPrimeFactor));
+		return Long.toString(highestPrimeFactor);
 	}
 }
