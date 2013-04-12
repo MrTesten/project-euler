@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(final String[] args)
 	{
 		Solver solver = null;
 
@@ -22,7 +22,7 @@ public class Main
 
 				System.out.print("Which problem would you like to solve? ");
 				String input = br.readLine();
-				
+
 				solver = new Solver(input);
 			}
 			catch (IOException e)

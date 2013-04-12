@@ -1,12 +1,17 @@
 package com.teamtesten.projecteuler.utilities;
 
-public class CommonUtilities
-{	
-	public static boolean isPrime(long n) 
+public final class CommonUtilities
+{
+	private CommonUtilities()
+	{
+
+	}
+
+	public static boolean isPrime(final long n)
 	{
 		if(n==2)
 			return true;
-		
+
 	    if(n<2 || n%2==0)
 	    	return false;
 
@@ -18,7 +23,7 @@ public class CommonUtilities
 	    return true;
 	}
 
-	public static boolean isFactor(long number, long divisor)
+	public static boolean isFactor(final long number, final long divisor)
 	{
 		return(number%divisor == 0);
 	}
